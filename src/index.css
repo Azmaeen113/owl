@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Owl Coin Design System - Dark Spooky Theme with Owl Aesthetics
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Dark Spooky Theme Base Colors */
+    --background: 220 30% 6%; /* Deep dark blue-black */
+    --foreground: 45 80% 95%; /* Warm cream text */
+
+    /* Card & Surface Colors */
+    --card: 220 25% 8%;
+    --card-foreground: 45 80% 95%;
+    --popover: 220 25% 8%;
+    --popover-foreground: 45 80% 95%;
+
+    /* Owl-themed Primary Colors (Warm Orange/Amber) */
+    --primary: 25 100% 58%; /* Bright owl orange */
+    --primary-foreground: 220 30% 6%;
+    --primary-glow: 35 100% 65%; /* Lighter orange for glows */
+
+    /* Secondary Colors (Golden Yellow) */
+    --secondary: 51 100% 50%; /* Golden yellow */
+    --secondary-foreground: 220 30% 6%;
+    --secondary-glow: 51 100% 65%; /* Lighter golden */
+
+    /* Muted Dark Tones */
+    --muted: 220 20% 12%;
+    --muted-foreground: 45 30% 70%;
+
+    /* Accent Colors (Warm Amber) */
+    --accent: 35 100% 60%;
+    --accent-foreground: 220 30% 6%;
+
+    /* Interactive States */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 45 80% 95%;
+    --border: 220 20% 15%;
+    --input: 220 20% 15%;
+    --ring: 25 100% 58%;
+
+    /* Owl Eye Glow Colors */
+    --owl-eyes: 51 100% 60%; /* Golden owl eyes */
+    --owl-eyes-glow: 51 100% 70%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-dark: linear-gradient(180deg, hsl(var(--background)), hsl(220 25% 8%));
+    --gradient-glow: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.3), transparent);
+
+    /* Shadows & Glows */
+    --shadow-owl: 0 0 30px hsl(var(--primary) / 0.4);
+    --shadow-eyes: 0 0 20px hsl(var(--owl-eyes) / 0.6);
+    --shadow-elegant: 0 10px 30px -10px hsl(220 30% 3% / 0.8);
+
+    /* Animations & Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Typography */
+    --font-pixel: "Pixelify Sans", monospace;
+
+    --radius: 0.75rem;
+  }
+
+  /* Dark mode uses same colors since we're dark by default */
+  .dark {
+    /* Keep all the same variables for consistency */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground overflow-x-hidden;
+    cursor: url('/lovable-uploads/07e7e8e4-97ba-4cb1-80ce-9d7a73a38e73.png') 16 16, auto;
+    font-family: system-ui, sans-serif;
+  }
+
+  /* Asimovian Font Classes */
+  .asimovian-regular {
+    font-family: "Asimovian", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  /* Pixelify Sans Font Classes */
+  .pixelify-sans-title {
+    font-family: var(--font-pixel);
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .pixelify-sans-heading {
+    font-family: var(--font-pixel);
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  .pixelify-sans-tagline {
+    font-family: var(--font-pixel);
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  /* Scrollbar Styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary-glow));
+  }
+}
+
+@layer components {
+  /* Glow Text Effect */
+  .glow-text {
+    text-shadow: 0 0 10px hsl(var(--primary) / 0.5),
+                 0 0 20px hsl(var(--primary) / 0.3),
+                 0 0 30px hsl(var(--primary) / 0.2);
+  }
+
+  /* Owl Eyes Glow */
+  .owl-eyes-glow {
+    box-shadow: var(--shadow-eyes);
+    animation: eyeGlow 3s ease-in-out infinite alternate;
+  }
+
+  /* Floating Animation */
+  .floating {
+    animation: floating 3s ease-in-out infinite;
+  }
+
+  /* Sparkle Cursor Trail */
+  .sparkle {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    animation: sparkleAnim 1s ease-out forwards;
+  }
+
+  /* Button Hover Glow */
+  .btn-glow:hover {
+    box-shadow: var(--shadow-owl);
+    transform: translateY(-2px);
+  }
+}
+
+@layer utilities {
+  /* Custom Animations */
+  @keyframes floating {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes eyeGlow {
+    0% { 
+      box-shadow: 0 0 20px hsl(var(--owl-eyes) / 0.6);
+    }
+    100% { 
+      box-shadow: 0 0 30px hsl(var(--owl-eyes) / 0.8),
+                  0 0 40px hsl(var(--owl-eyes) / 0.4);
+    }
+  }
+
+  @keyframes sparkleAnim {
+    0% {
+      opacity: 1;
+      transform: scale(0) rotate(0deg);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1) rotate(180deg);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0) rotate(360deg);
+    }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(var(--primary) / 0.4);
+    }
+    50% {
+      box-shadow: 0 0 30px hsl(var(--primary) / 0.8),
+                  0 0 40px hsl(var(--primary) / 0.3);
+    }
+  }
+
+  /* Parallax Base */
+  .parallax {
+    transform-style: preserve-3d;
+  }
+}
