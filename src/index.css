@@ -80,7 +80,6 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground overflow-x-hidden;
-    cursor: url('/lovable-uploads/07e7e8e4-97ba-4cb1-80ce-9d7a73a38e73.png') 16 16, auto;
     font-family: system-ui, sans-serif;
   }
 
