@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Rocket, Users, TrendingUp, Target, Check } from 'lucide-react';
+import { Rocket, Users, TrendingUp, Target, CheckCircle } from 'lucide-react';
 
 const RoadmapSection = () => {
   const roadmapPhases = [
@@ -64,7 +64,7 @@ const RoadmapSection = () => {
   };
 
   const getStatusIcon = (status: string) => {
-    return status === 'completed' ? Check : null;
+    return status === 'completed' ? CheckCircle : null;
   };
 
   return (
@@ -96,7 +96,7 @@ const RoadmapSection = () => {
                           <phase.icon className="w-6 h-6" />
                         </div>
                         {getStatusIcon(phase.status) && (
-                          <Check className="w-6 h-6 text-green-500" />
+                          <CheckCircle className="w-6 h-6 text-primary" />
                         )}
                       </div>
                       <CardTitle className="asimovian-regular text-2xl">
@@ -142,20 +142,32 @@ const RoadmapSection = () => {
                 we'll soar to new heights while maintaining our core values of fairness, 
                 transparency, and community-first approach.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <div className="bg-primary/10 px-4 py-2 rounded-lg">
-                  <span className="text-primary font-semibold">✅ Fair Launch</span>
-                </div>
-                <div className="bg-primary/10 px-4 py-2 rounded-lg">
-                  <span className="text-primary font-semibold">✅ Locked Liquidity</span>
-                </div>
-                <div className="bg-primary/10 px-4 py-2 rounded-lg">
-                  <span className="text-primary font-semibold">✅ Community Focused</span>
-                </div>
-                <div className="bg-primary/10 px-4 py-2 rounded-lg">
-                  <span className="text-primary font-semibold">✅ No Rug Pulls</span>
-                </div>
-              </div>
+                             <div className="flex flex-wrap justify-center gap-4">
+                 <div className="bg-primary/10 px-4 py-2 rounded-lg">
+                   <span className="text-primary font-semibold flex items-center">
+                     <span className="elegant-check-sm mr-2">✓</span>
+                     Fair Launch
+                   </span>
+                 </div>
+                 <div className="bg-primary/10 px-4 py-2 rounded-lg">
+                   <span className="text-primary font-semibold flex items-center">
+                     <span className="elegant-check-sm mr-2">✓</span>
+                     Locked Liquidity
+                   </span>
+                 </div>
+                 <div className="bg-primary/10 px-4 py-2 rounded-lg">
+                   <span className="text-primary font-semibold flex items-center">
+                     <span className="elegant-check-sm mr-2">✓</span>
+                     Community Focused
+                   </span>
+                 </div>
+                 <div className="bg-primary/10 px-4 py-2 rounded-lg">
+                   <span className="text-primary font-semibold flex items-center">
+                     <span className="elegant-check-sm mr-2">✓</span>
+                     No Rug Pulls
+                   </span>
+                 </div>
+               </div>
             </CardContent>
           </Card>
         </div>

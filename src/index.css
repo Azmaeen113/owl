@@ -98,6 +98,27 @@ All colors MUST be HSL.
     font-style: normal;
   }
 
+  /* Elegant Check Mark Styles */
+  .elegant-check {
+    @apply inline-flex items-center justify-center w-6 h-6 rounded-full bg-primary/20 text-primary font-bold text-sm;
+    box-shadow: 0 2px 8px hsl(var(--primary) / 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .elegant-check:hover {
+    @apply bg-primary/30 text-primary;
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px hsl(var(--primary) / 0.4);
+  }
+
+  .elegant-check-sm {
+    @apply w-5 h-5 text-xs;
+  }
+
+  .elegant-check-lg {
+    @apply w-8 h-8 text-base;
+  }
+
   .pixelify-sans-heading {
     font-family: var(--font-pixel);
     font-optical-sizing: auto;

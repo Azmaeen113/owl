@@ -126,7 +126,7 @@ const TokenomicsSection = () => {
               <CardContent className="space-y-3">
                 {keyPoints.map((point, index) => (
                   <div key={index} className="flex items-center">
-                    <span className="text-xl mr-3">{point.emoji}</span>
+                    <span className="elegant-check mr-3">✓</span>
                     <span className="text-foreground">{point.text}</span>
                   </div>
                 ))}
