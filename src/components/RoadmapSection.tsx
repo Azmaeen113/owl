@@ -5,14 +5,12 @@ const RoadmapSection = () => {
   const roadmapPhases = [
     {
       phase: "Phase 1",
-      name: "The Hatching",
+      name: "Awakening",
       status: "completed",
       icon: Rocket,
       items: [
-        "Token Launch & Smart Contract Deployment",
-        "Initial Community Building",
-        "Liquidity Pool Creation & Lock",
-        "Website & Social Media Launch"
+        "First holders",
+        "Community nest opens"
       ]
     },
     {
@@ -21,34 +19,33 @@ const RoadmapSection = () => {
       status: "current",
       icon: Users,
       items: [
-        "Marketing Campaign Launch",
-        "Community Partnerships",
-        "Influencer Collaborations",
-        "Meme Contest & Community Events"
+        "Launch",
+        "Listings",
+        "Shilling waves"
       ]
     },
     {
       phase: "Phase 3",
-      name: "Soaring High", 
+      name: "Rise of the Night Owls", 
       status: "upcoming",
       icon: TrendingUp,
       items: [
-        "DEX Listings (PancakeSwap, Uniswap)",
-        "CoinGecko & CoinMarketCap Listings",
-        "Advanced Trading Features",
-        "Community Governance Implementation"
+        "Meme power",
+        "Community raids",
+        "Airdrop contest",
+        "Growing the army"
       ]
     },
     {
       phase: "Phase 4",
-      name: "To the Moon Nest",
+      name: "The Moon Nest",
       status: "future",
       icon: Target,
       items: [
-        "Major CEX Listings",
-        "Cross-Chain Bridge Development",
-        "NFT Collection Launch",
-        "Owl Coin Ecosystem Expansion"
+        "Major milestones",
+        "Stronger unity",
+        "Collaborations",
+        "Building together"
       ]
     }
   ];
@@ -75,10 +72,10 @@ const RoadmapSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="asimovian-regular text-4xl md:text-5xl font-bold mb-6 glow-text">
-            Flight Plan to the Moon
+            🦉 $OWL Flight Path – Roadmap
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Our journey from a small hatchling to soaring with the eagles. 
+            Our journey from awakening to the moon nest. 
             Each phase brings us closer to becoming the fairest coin in the sky.
           </p>
         </div>
@@ -153,7 +150,7 @@ const RoadmapSection = () => {
                   <span className="text-primary font-semibold">✅ Locked Liquidity</span>
                 </div>
                 <div className="bg-primary/10 px-4 py-2 rounded-lg">
-                  <span className="text-primary font-semibold">✅ Community Driven</span>
+                  <span className="text-primary font-semibold">✅ Community Focused</span>
                 </div>
                 <div className="bg-primary/10 px-4 py-2 rounded-lg">
                   <span className="text-primary font-semibold">✅ No Rug Pulls</span>

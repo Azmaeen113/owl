@@ -6,8 +6,8 @@ const AboutSection = () => {
   const features = [
     {
       icon: Users,
-      title: "100% Community Driven",
-      description: "Every decision is made by the community, for the community"
+      title: "Community Driven",
+      description: "Also community driven yes, but every decision is not made by community"
     },
     {
       icon: Shield,

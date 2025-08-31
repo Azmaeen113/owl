@@ -1,19 +1,20 @@
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recharts';
-import { Lock, Users, Gift, TrendingUp } from 'lucide-react';
+import { Lock, Users, Gift, TrendingUp, Megaphone } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const TokenomicsSection = () => {
   const data = [
-    { name: 'Liquidity Pool (Locked)', value: 50, color: '#ff6b35', icon: Lock },
-    { name: 'Team / Founder', value: 25, color: '#ffd700', icon: Users },
-    { name: 'Airdrops & Rewards', value: 5, color: '#ffa500', icon: Gift },
-    { name: 'Community Growth', value: 20, color: '#f7931e', icon: TrendingUp }
+    { name: 'LP (Locked)', value: 50, color: '#FF6B9D', icon: Lock },
+    { name: 'Team', value: 10, color: '#4ECDC4', icon: Users },
+    { name: 'Airdrops', value: 5, color: '#45B7D1', icon: Gift },
+    { name: 'Marketing', value: 15, color: '#96CEB4', icon: Megaphone },
+    { name: 'Community Growth', value: 20, color: '#FFEAA7', icon: TrendingUp }
   ];
 
   const keyPoints = [
     { text: "LP Locked - No Rug Pulls", emoji: "✅" },
-    { text: "Only 25% Team Allocation", emoji: "✅" },
-    { text: "25% Dedicated to Community Building", emoji: "✅" },
+    { text: "Only 10% Team Allocation", emoji: "✅" },
+    { text: "20% Dedicated to Community Building", emoji: "✅" },
     { text: "Full Transparency", emoji: "✅" }
   ];
 
@@ -21,7 +22,7 @@ const TokenomicsSection = () => {
     if (props.active && props.payload && props.payload.length) {
       const data = props.payload[0];
       return (
-        <div className="bg-card border border-border rounded-lg p-3 shadow-lg">
+        <div className="bg-card border border-border rounded-lg p-3 shadow-lg transform scale-110 transition-transform duration-200">
           <p className="font-semibold">{data.name}</p>
           <p className="text-primary">{data.value}%</p>
         </div>
@@ -38,7 +39,7 @@ const TokenomicsSection = () => {
             Tokenomics
           </h2>
           <p className="asimovian-regular text-2xl text-primary mb-4">
-            Fair & Transparent
+            $OWL – The Plan is Set
           </p>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Our tokenomics are designed with fairness and community growth in mind. 
@@ -49,7 +50,7 @@ const TokenomicsSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Chart Section */}
           <div className="relative">
-            <Card className="bg-card/50 backdrop-blur-sm border-border">
+            <Card className="bg-card/50 backdrop-blur-sm border-border group">
               <CardHeader>
                 <CardTitle className="asimovian-regular text-2xl text-center">
                   Token Distribution
@@ -67,9 +68,17 @@ const TokenomicsSection = () => {
                         outerRadius={120}
                         paddingAngle={2}
                         dataKey="value"
+                        className="transition-all duration-300 group-hover:scale-105"
                       >
                         {data.map((entry, index) => (
-                          <Cell key={`cell-${index}`} fill={entry.color} />
+                          <Cell 
+                            key={`cell-${index}`} 
+                            fill={entry.color}
+                            className="transition-all duration-300 hover:scale-110 hover:shadow-2xl"
+                            style={{
+                              filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.2))',
+                            }}
+                          />
                         ))}
                       </Pie>
                       <Tooltip content={renderCustomTooltip} />
@@ -85,12 +94,12 @@ const TokenomicsSection = () => {
             {/* Distribution Details */}
             <div className="space-y-4">
               {data.map((item, index) => (
-                <Card key={index} className="bg-card/50 backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-300">
+                <Card key={index} className="bg-card/50 backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-300 hover:scale-105">
                   <CardContent className="p-6">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center">
                         <div 
-                          className="w-4 h-4 rounded-full mr-3"
+                          className="w-4 h-4 rounded-full mr-3 shadow-lg"
                           style={{ backgroundColor: item.color }}
                         ></div>
                         <div className="flex items-center">
