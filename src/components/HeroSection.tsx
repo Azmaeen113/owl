@@ -8,7 +8,7 @@ const HeroSection = () => {
   const { toast } = useToast();
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  const contractAddress = "0x1234...5678"; // Replace with actual contract address
+  const contractAddress = "5smUoKGJx89N7uFk8nXMJHB9JSWZuCMPpfdfvFcjuNfm"; // Real contract address
 
   useEffect(() => {
     // Ensure video plays when component mounts

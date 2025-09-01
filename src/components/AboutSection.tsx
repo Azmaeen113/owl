@@ -44,7 +44,7 @@ const AboutSection = () => {
               
               <p className="text-lg text-muted-foreground leading-relaxed">
                 No hidden traps, no tricks – just memes, fun, and growth together. 
-                Join our parliament of wise owls and be part of something genuinely fair.
+                Join our community of wise owls and be part of something genuinely fair.
               </p>
             </div>
 

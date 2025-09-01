@@ -5,9 +5,9 @@ import owlCommunity from '@/assets/owl-community.png';
 
 const CommunitySection = () => {
   const communityStats = [
-    { label: 'Parliament Members', value: '5,000+', icon: Users },
-    { label: 'Daily Hoots', value: '1,200+', icon: MessageCircle },
-    { label: 'Community Rating', value: '4.9/5', icon: Star }
+    { label: 'Community Members', value: 'Growing', icon: Users },
+    { label: 'Active Community', value: '24/7', icon: MessageCircle },
+    { label: 'Community Rating', value: 'Amazing', icon: Star }
   ];
 
   const socialLinks = [
@@ -16,14 +16,14 @@ const CommunitySection = () => {
       url: 'https://x.com/owl_coins?s=21',
       icon: Twitter,
       description: 'Follow us for the latest updates and memes',
-      members: '3.2K Followers'
+      members: 'Join our community'
     },
     {
       name: 'Telegram',
       url: 'https://t.me/+YovWDkEBDLJkZWNk',
       icon: MessageCircle,
       description: 'Join our active community chat',
-      members: '2.8K Members'
+      members: 'Join our community'
     }
   ];
 
@@ -32,7 +32,7 @@ const CommunitySection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="asimovian-regular text-4xl md:text-5xl font-bold mb-6 glow-text">
-            Join the Parliament of Owls
+            Join the Owl Community
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Connect with fellow wise owls, share memes, and help shape the future of our community
